@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Mamba Platform</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #2A2B37;
+            --accent-color: #64CCC5;
+            --background: #FFFFFF;
+            --text-primary: #2A2B37;
+            --text-secondary: #676C7E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .nav-blur {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .custom-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.875rem 1.75rem;
+            border-radius: 12px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .custom-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(42, 43, 55, 0.1);
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-image {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .feature-image img {
+            transition: transform 0.5s ease;
+        }
+
+        .feature-card:hover .feature-image img {
+            transform: scale(1.05);
+        }
+
+        .nav-link {
+            position: relative;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .nav-link.active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-blur">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-semibold tracking-tight">mamba</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="features.html" class="nav-link active">Features</a>
+                    <a href="solutions.html" class="nav-link">Solutions</a>
+                    <a href="enterprise.html" class="nav-link">Enterprise</a>
+                    <a href="resources.html" class="nav-link">Resources</a>
+                    <button class="custom-btn">Get Started Free</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6">
+                    Features that Power Your Development
+                </h1>
+                <p class="text-lg text-gray-600">
+                    Discover all the tools and features that make Mamba the perfect platform for modern web development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Features -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="feature-card p-8">
+                    <div class="feature-image h-64 mb-6">
+                        <img id="feature1" class="w-full h-full object-cover" alt="Visual Editor">
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Visual Editor</h3>
+                    <p class="text-gray-600 mb-4">
+                        Drag-and-drop interface builder with real-time preview. Create responsive layouts without writing code.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-[#64CCC5]"></i>
+                            <span>Responsive Grid System</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-[#64CCC5]"></i>
+                            <span>Component Library</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-[#64CCC5]"></i>
+                            <span>Custom CSS Support</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-card p-8">
+                    <div class="feature-image h-64 mb-6">
+                        <img id="feature2" class="w-full h-full object-cover" alt="Deployment">
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">One-Click Deployment</h3>
+                    <p class="text-gray-600 mb-4">
+                        Deploy your applications globally with a single click. Automatic scaling and load balancing included.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-[#64CCC5]"></i>
+                            <span>Global CDN</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-[#64CCC5]"></i>
+                            <span>SSL Certificates</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-[#64CCC5]"></i>
+                            <span>Continuous Deployment</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">More Powerful Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card p-6">
+                    <div class="feature-image h-48 mb-6">
+                        <img id="feature3" class="w-full h-full object-cover" alt="Analytics">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Real-time Analytics</h3>
+                    <p class="text-gray-600">Monitor your application's performance and user behavior in real-time.</p>
+                </div>
+
+                <div class="feature-card p-6">
+                    <div class="feature-image h-48 mb-6">
+                        <img id="feature4" class="w-full h-full object-cover" alt="Security">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Advanced Security</h3>
+                    <p class="text-gray-600">Enterprise-grade security features to protect your applications and data.</p>
+                </div>
+
+                <div class="feature-card p-6">
+                    <div class="feature-image h-48 mb-6">
+                        <img id="feature5" class="w-full h-full object-cover" alt="API">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">API Integration</h3>
+                    <p class="text-gray-600">Connect with any API or database using our simple integration tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const imageSizes = {
+            feature1: { width: 800, height: 600 },
+            feature2: { width: 800, height: 600 },
+            feature3: { width: 600, height: 400 },
+            feature4: { width: 600, height: 400 },
+            feature5: { width: 600, height: 400 }
+        };
+
+        function updateImages() {
+            Object.entries(imageSizes).forEach(([id, size]) => {
+                const img = document.getElementById(id);
+                if (img) {
+                    const timestamp = new Date().getTime();
+                    img.src = `https://picsum.photos/${size.width}/${size.height}?t=${timestamp}`;
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', updateImages);
+        setInterval(updateImages, 3000);
+    </script>
+</body>
+</html>
